@@ -29,22 +29,8 @@
   object-fit: cover;
   background-position: center;
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth slide transition with custom cubic-bezier timing function */
-}
-
-#prev-btn {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin: 0px 10px;
-}
-
-#next-btn {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin: 0px 10px;
 }
 
 button {
@@ -174,9 +160,9 @@ button:hover {
 #s-1 {
   height: 150px;
   width: 100%;
-  display: flex; /* Use flexbox */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -191,6 +177,7 @@ button:hover {
   color: #000;
   letter-spacing: 4px;
   padding: 0px 5px;
+  margin-top: 15px;
 }
 
 /* Custom styles for testimonials */
@@ -209,25 +196,22 @@ button:hover {
 }
 
 .content {
-
   width: 40%;
   line-height: 3rem;
   padding-left: 70px;
   justify-content: center;
   align-items: center;
   align-content: center;
-position: absolute;
-right: 0;
-font-family: Georgia, "Times New Roman", Times, serif;
-
+  position: absolute;
+  right: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .content h3 {
   margin: 50px;
   color: rgb(139, 108, 74);
 }
-.content p{
-
+.content p {
   padding-top: 100px;
   color: #453626;
 }
@@ -239,8 +223,134 @@ font-family: Georgia, "Times New Roman", Times, serif;
   background-position: center;
   margin: 0px 60px 60px 0px;
 }
+.animated-line {
+  margin-top: 50px;
+  border: none;
+  height: 5px;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
 
+.animated-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ff0000;
+  top: 0;
+  left: -100%;
+  animation: slideRight 2s infinite linear;
+}
 
+@keyframes slideRight {
+  100% {
+    left: 100%;
+  }
+}
+
+/* ****************4th-section**************** */
+
+.fourthSection {
+  width: 100%;
+  margin-top: 100px;
+  overflow: hidden;
+  background-color: rgb(173, 143, 111);
+
+  justify-content: center;
+}
+.fourthSection img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+.fourthSection h2 {
+  text-align: center;
+  width: 50%;
+  height: 0;
+  transform: translate(50%, 400px);
+  margin: 0;
+  letter-spacing: 4px;
+}
+
+.fifthSection {
+  text-align: center;
+  margin-top: 100px;
+  align-content: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.fifthSection p {
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 20px;
+  width: 50%;
+  margin-left: 25%;
+  letter-spacing: 3px;
+}
+.fifthSection h2 {
+  color: #8c6c4a;
+}
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr); /* Three columns with equal width */
+  gap: 15px; /* Add some gap between grid items */
+
+  margin: 100px;
+}
+.grid-container1 img {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10%;
+  width: 100%; /* Make the image fill the container width */
+  object-fit: cover;
+  height: 100%;
+}
+#fifthSection {
+  margin-top: 50px;
+}
+.sixthSection {
+  width: 100%;
+  height: 500px;
+  display: flex;
+
+  margin-top: 80px;
+}
+#container {
+  width: 30%;
+  height: 30%;
+}
+#container img {
+  margin-left: 200px;
+  box-shadow: 20px 6px 20px 15px rgba(62, 42, 19, 0.19);
+}
+#content {
+  width: 40%;
+  line-height: 3rem;
+  padding-left: 70px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-left: 200px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: left;
+}
+#content h3 {
+ font-size: 60px;
+  color: rgb(139, 108, 74);
+  padding-left: 60px;
+border-radius: 10%;
+display: inline-block; /* or inline */
+background-color: #f0f0f0;
+
+}
+#content p {
+  padding-top: 50px;
+  color: #453626;
+  padding-left: 100px;
+}
 
 @media (max-width: 1440px) {
 }
